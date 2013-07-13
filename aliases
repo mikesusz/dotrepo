@@ -1,0 +1,48 @@
+# enable color support of ls and also add handy aliases
+alias ls='ls -lA $*'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias cl="clear"
+alias cls="clear;ls"
+alias sr="screen -r $*"
+alias lsp="ls -lA $* | more"
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+
+# append ;d to long shell scripts and fred will say when they're done
+alias d='say -v fred "done"'
+
+# open here in Finder. o? o?
+alias o='open .'
+
+# ask subversion whut? happened on a file
+alias whut="svn diff -r BASE:PREV $*"
+
+# stuff for git
+alias gfo="git fetch origin"
+alias gs="git status"
+
+# reload profile 'cause we keep changing aliases
+alias pro="source ~/.profile"
+
+# go to projects
+alias proj="cd /Users/Shared/Projects/"
+
+# reload filesystem based templates in radiant CMS
+alias radreg="rake radiant:extensions:file_system_resources:register"
+
+# restart fitbit daemon
+alias fitbit="sudo launchctl stop com.fitbit.fitbitd;sudo launchctl start com.fitbit.fitbitd"
+
+# get latest wordpress tarball
+alias getwp="wget http://wordpress.org/latest.tar.gz"
+
+# cd into whatever is the forefront Finder window.
+cdf() {  # short for cdfinder
+      cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
+}
