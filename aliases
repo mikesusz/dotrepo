@@ -1,3 +1,6 @@
+# an alias for this very project to update itself.
+alias dotrepo='cd ~/.dotrepo;git pull;source ~/.profile;cd'
+
 # enable color support of ls and also add handy aliases
 alias ls='ls -lA $*'
 
