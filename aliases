@@ -29,6 +29,7 @@ alias whut="svn diff -r BASE:PREV $*"
 # stuff for git
 alias gfo="git fetch origin"
 alias gs="git status"
+alias gp="git pull"
 
 # reload profile 'cause we keep changing aliases
 alias pro="source ~/.profile"
