@@ -2,7 +2,7 @@
 alias dotrepo='cd ~/.dotrepo;git pull;source ~/.profile;cd'
 
 # enable color support of ls and also add handy aliases
-alias ls='ls -lA $*'
+alias ls='ls -lA'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -10,7 +10,7 @@ alias egrep='egrep --color=auto'
 
 alias cl="clear"
 alias cls="clear;ls"
-alias sr="screen -r $*"
+alias sr="screen -r"
 alias lsp="ls -lA $* | more"
 
 # some more ls aliases
