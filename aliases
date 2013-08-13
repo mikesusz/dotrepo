@@ -34,9 +34,6 @@ alias gp="git pull"
 # reload profile 'cause we keep changing aliases
 alias pro="source ~/.profile"
 
-# go to projects
-alias proj="cd /Users/Shared/Projects/"
-
 # reload filesystem based templates in radiant CMS
 alias radreg="rake radiant:extensions:file_system_resources:register"
 
