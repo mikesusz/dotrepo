@@ -1,0 +1,7 @@
+# a function for this very project to update itself.
+
+function dotrepo {
+	cd ~/.dotrepo
+	git pull
+	source ~/.profile
+}

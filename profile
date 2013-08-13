@@ -19,7 +19,7 @@ HISTFILESIZE=2000
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-PS1='\[\033[0;35m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1='\[\033[1;30m\][\[\033[0;35m\]\u\[\033[0;37m\]@\[\033[1;35m\]\h\[\033[1;30m\]]\[\033[1;30m\]:\[\033[01;34m\]\w\[\033[1;30m\]\$\[\033[0;30m\] '
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -32,15 +32,20 @@ esac
 force_color_prompt=yes
 
 export CLICOLOR=1
+#export LSCOLORS=GxFxCxDxBxegedabagaced
 
-P_DEPTH=8
-
-if [ -f ~/.dotlocal ]; then
-    source ~/.dotlocal
-fi
+P_DEPTH=4
 
 if [ -f ~/.dotrepo/aliases ]; then
     source  ~/.dotrepo/aliases
+fi
+
+if [ -f ~/.dotrepo/functions ]; then
+    source  ~/.dotrepo/functions
+fi
+
+if [ -f ~/.dotlocal ]; then
+    source ~/.dotlocal
 fi
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
