@@ -1,7 +1,9 @@
 # a function for this very project to update itself.
 
 function dotrepo {
+	odir=`pwd`
 	cd ~/.dotrepo
 	git pull
 	source ~/.profile
+	cd $odir
 }
