@@ -37,5 +37,8 @@ alias radreg="rake radiant:extensions:file_system_resources:register"
 # restart fitbit daemon
 alias fitbit="sudo launchctl stop com.fitbit.fitbitd;sudo launchctl start com.fitbit.fitbitd"
 
+# flush os x dns cache
+alias dns='sudo dscacheutil -flushcache'
+
 # get latest wordpress tarball
 alias getwp="wget http://wordpress.org/latest.tar.gz"
