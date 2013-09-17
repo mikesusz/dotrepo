@@ -28,6 +28,7 @@ alias gfo="git fetch origin"
 alias gs="git status"
 alias gp="git pull"
 alias gb="git branch"
+alias gco="git checkout" # avoided 'gc' too close to gcc
 
 # reload profile 'cause we keep changing aliases
 alias pro="source ~/.profile"
