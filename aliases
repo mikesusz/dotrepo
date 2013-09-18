@@ -45,3 +45,6 @@ alias dns='sudo dscacheutil -flushcache'
 
 # get latest wordpress tarball
 alias getwp="wget http://wordpress.org/latest.tar.gz"
+
+# nginx has trouble letting go.
+alias nginx-cache="sudo find /var/lib/nginx/cache/ -type f | xargs sudo rm"
