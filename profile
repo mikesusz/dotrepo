@@ -19,7 +19,8 @@ HISTFILESIZE=2000
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-PS1='\[\033[1;30m\][\[\033[0;35m\]\u\[\033[0;37m\]@\[\033[1;35m\]\h\[\033[1;30m\]]\[\033[1;30m\]:\[\033[01;34m\]\w\[\033[1;30m\]\$\[\033[0;30m\] '
+PS1='\[\033[1;30m\][\[\033[0;35m\]\u\[\033[0;37m\]@\[\033[1;35m\]\h\[\033[1;30m\]]\[\033[1;30m\]:\[\033[01;34m\]\w\[\033[1;30m\]\$\[\033[0;30m\]\[\033[00m\] '
+#PS1='\[\033[0;35m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
