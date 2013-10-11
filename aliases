@@ -35,6 +35,9 @@ alias fts="git reset --hard origin/master" # you know what this means.
 # reload profile 'cause we keep changing aliases
 alias pro="source ~/.profile"
 
+# make it quicker to search through ps
+alias psg="ps aux | grep "
+
 # reload filesystem based templates in radiant CMS
 alias radreg="rake radiant:extensions:file_system_resources:register"
 
