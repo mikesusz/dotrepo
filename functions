@@ -32,3 +32,11 @@ function pro {
 	fi
 
 }
+
+# linux systems, aptitude update + safe upgrade
+
+function aptup {
+    sudo aptitude update;
+    sudo aptitude safe-upgrade;
+}
+
