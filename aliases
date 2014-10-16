@@ -31,6 +31,7 @@ alias gb="git branch"
 alias gco="git checkout" # avoided 'gc' too close to gcc
 alias gm="git merge" # there is a program called GraphicsMagick but i dont use it.
 alias fts="git reset --hard origin/master" # you know what this means.
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit --date=relative -25"
 
 # reload profile 'cause we keep changing aliases
 # alias pro="source ~/.profile"
