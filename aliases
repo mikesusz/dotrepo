@@ -20,7 +20,9 @@ alias d='say -v fred "done"'
 # open here in Finder. o? o?
 alias o='open .'
 
-# ask subversion whut? happened on a file
+# stuff for subversion
+alias ss="svn status $*"
+alias sup="svn update $*"
 alias whut="svn diff -r BASE:PREV $*"
 
 # stuff for git
