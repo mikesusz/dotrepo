@@ -8,6 +8,19 @@ function dotrepo {
 	cd $odir
 }
 
+# this will become smarter but for now it just invokes vi to edit .dotlocal
+
+function dotlocal {
+    vi ~/.dotlocal
+    pro
+}
+
+# a function for git commit with message
+
+function gcm () { 
+        git commit -m "$*" 
+}
+
 # cd into whatever is the forefront Finder window.
 cdf() {  # short for cdfinder
 	cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
