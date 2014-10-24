@@ -1,5 +1,4 @@
 # a function for this very project to update itself.
-
 function dotrepo {
 	odir=`pwd`
 	cd ~/.dotrepo
@@ -9,16 +8,25 @@ function dotrepo {
 }
 
 # this will become smarter but for now it just invokes vi to edit .dotlocal
-
 function dotlocal {
     vi ~/.dotlocal
     pro
 }
 
-# a function for git commit with message
+# a function to make home directory symlinks to dotfiles in dotrepo
+function dotdot () {
+	if [ ! -f ~/.vimrc ]; then
+		ln -s ~/.dotrepo/vimrc ~/.vimrc
+	fi
+	if [ ! -f ~/.toprc ]; then
+		ln -s ~/.dotrepo/toprc ~/.toprc
+	fi
+}
 
-function gcm () { 
-        git commit -m "$*" 
+
+# a function for git commit with message
+function gcm () {
+        git commit -m "$*"
 }
 
 # cd into whatever is the forefront Finder window.
