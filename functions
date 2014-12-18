@@ -41,6 +41,16 @@ cdd() {
 	ls
 }
 
+# copy  file to the Desktop
+cpd() {
+	cp "$@" ~/Desktop/
+}
+
+# move a file to the Desktop
+mvd() {
+	mv "$@" ~/Desktop/
+}
+
 # reload profile 'cause we keep changing aliases
 function pro {
 
