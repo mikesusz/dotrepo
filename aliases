@@ -1,5 +1,5 @@
 # enable color support of ls and also add handy aliases
-alias ls='ls -lA'
+alias ls='ls -lAh'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
