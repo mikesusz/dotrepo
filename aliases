@@ -33,6 +33,7 @@ alias gfo="git fetch origin"
 alias gs="git status $*"
 alias ga="git add $*"
 alias gp="git pull $*"
+alias gd="git diff $*"
 alias gb="git branch $*"
 alias gco="git checkout $*" # avoided 'gc' too close to gcc
 alias gm="git merge $*" # there is a program called GraphicsMagick but i dont use it.
