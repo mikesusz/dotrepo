@@ -10,6 +10,9 @@ alias cls="clear;ls"
 alias sr="screen -r"
 alias lsp="ls -lFA $* | more"
 
+# from furbo - http://furbo.org/2014/09/03/the-terminal/
+alias con="tail -40 -f /var/log/system.log"
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'

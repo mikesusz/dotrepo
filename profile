@@ -16,6 +16,12 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# from furbo - http://furbo.org/2014/09/03/the-terminal/
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+export EDITOR="vi"
+export CLICOLOR=1
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
