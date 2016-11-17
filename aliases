@@ -46,6 +46,9 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 # make it quicker to search through ps
 alias psg="ps aux | grep $*"
 
+# history searching
+alias his="history | grep $*"
+
 # tired of looking at compass init --help every time.
 alias compinit="compass init --sass-dir=sass --css-dir=. --images-dir=images --javascripts-dir=javascripts --syntax=scss --fonts-dir=fonts"
 
