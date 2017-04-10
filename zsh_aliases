@@ -1,0 +1,43 @@
+# enable color support of ls and also add handy aliases
+alias ls='ls -lFAh'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias cl="clear"
+alias cls="clear;ls"
+alias sr="screen -r"
+alias lsp="ls -lFAh $* | more"
+
+# from furbo - http://furbo.org/2014/09/03/the-terminal/
+alias con="tail -40 -f /var/log/system.log"
+
+# filesystem utilities
+alias rmds="find ./ -name .DS_Store | xargs rm"
+
+# append ;d to long shell scripts and fred will say when they're done
+alias d='say -v fred "done"'
+
+# open here in Finder. o? o?
+alias o='open .'
+
+# stuff for git
+alias gs="git status $*"
+alias fts="git reset --hard origin" # you know what this means.
+
+# make it quicker to search through ps
+alias psg="ps aux | grep $*"
+
+# history searching
+alias his="history | grep $*"
+
+# flush os x dns cache
+alias dns='sudo dscacheutil -flushcache'
+
+# get latest wordpress tarball
+alias getwp="wget https://wordpress.org/latest.tar.gz"
+
+# nginx has trouble letting go.
+alias nginx-cache="sudo find /var/lib/nginx/cache/ -type f | xargs sudo rm"
+
