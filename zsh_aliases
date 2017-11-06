@@ -22,12 +22,20 @@ alias d='say -v fred "done"'
 # open here in Finder. o? o?
 alias o='open .'
 
+# pipe commands via less
+alias -g p="| less"
+
 # stuff for git
 alias gs="git status $*"
 alias fts="git reset --hard origin" # you know what this means.
+alias gmv="git mv $*"
 
 # make it quicker to search through ps
 alias psg="ps aux | grep $*"
+
+# aliases for npm/node tasks
+alias nrd="npm run dev"
+alias nrl="npm run lint"
 
 # history searching
 alias his="history | grep $*"
@@ -41,3 +49,9 @@ alias getwp="wget https://wordpress.org/latest.tar.gz"
 # nginx has trouble letting go.
 alias nginx-cache="sudo find /var/lib/nginx/cache/ -type f | xargs sudo rm"
 
+function gnb() {
+  if [ "$1" != "" ]
+  then
+    git branch $1 && git checkout $1
+  fi
+}

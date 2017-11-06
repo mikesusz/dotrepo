@@ -41,8 +41,8 @@ set cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 set expandtab                   "et:    uses spaces instead of tab characters
 set smarttab                    "sta:   helps with backspacing because of expandtab
-set tabstop=4                   "ts:    number of spaces that a tab counts for
-set shiftwidth=4                "sw:    number of spaces to use for autoindent
+set tabstop=2                   "ts:    number of spaces that a tab counts for
+set shiftwidth=2                "sw:    number of spaces to use for autoindent
 set shiftround                  "sr:    rounds indent to a multiple of shiftwidth
 
 set nojoinspaces                "nojs:  prevents inserting two spaces after punctuation on a join (it's not 1990 anymore)
@@ -96,6 +96,13 @@ if &columns == 80
     set nonumber
     set foldcolumn=0
 endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'alvan/vim-closetag'
+call plug#end()
+
+" filenames like *.xml, *.html, *.xhtml, ...
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 
 " }}}
 
