@@ -1,0 +1,69 @@
+# a function for this very project to update itself.
+function dotrepo {
+	odir=`pwd`
+	cd ~/.dotrepo
+	git pull
+	pro
+	cd $odir
+}
+
+# this will become smarter but for now it just invokes vi to edit .dotlocal
+function dotlocal {
+    vi ~/.dotlocal
+    pro
+}
+
+# a function to make home directory symlinks to dotfiles in dotrepo
+function dotdot () {
+	if [ ! -f ~/.vimrc ]; then
+		ln -s ~/.dotrepo/vimrc ~/.vimrc
+	fi
+	if [ ! -f ~/.toprc ]; then
+		ln -s ~/.dotrepo/toprc ~/.toprc
+	fi
+}
+
+
+# a function for git commit with message
+function gcm () {
+        git commit -m "$*"
+}
+
+# cd into whatever is the forefront Finder window.
+cdf() {  # short for cdfinder
+	cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
+}
+
+# automatically ls after you cd. clear before.
+cdd() {
+	clear
+	cd "$*"
+	ls
+}
+
+# copy  file to the Desktop
+cpd() {
+	cp "$@" ~/Desktop/
+}
+
+# move a file to the Desktop
+mvd() {
+	mv "$@" ~/Desktop/
+}
+
+# reload profile 'cause we keep changing aliases
+function pro {
+
+	if [ -f ~/.zshrc ]; then
+		source ~/.zshrc
+	fi
+
+}
+
+# linux systems, aptitude update + safe upgrade
+
+function aptup {
+    sudo aptitude update;
+    sudo aptitude safe-upgrade;
+}
+
