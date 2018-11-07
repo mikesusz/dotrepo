@@ -29,6 +29,9 @@ alias -g p="| less"
 alias gs="git status $*"
 alias fts="git reset --hard origin" # you know what this means.
 alias gmv="git mv $*"
+# via @captainsafia on twitter
+alias gcmb="git branch --merged | grep -Ev '(^\*|master)' | xargs git branch -d"
+
 
 # make it quicker to search through ps
 alias psg="ps aux | grep $*"
