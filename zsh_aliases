@@ -39,6 +39,9 @@ alias psg="ps aux | grep $*"
 # aliases for npm/node tasks
 alias nrd="npm run dev"
 alias nrl="npm run lint"
+alias nrf="npm run format"
+alias nrs="npm run start"
+alias nrb="npm run build"
 
 # history searching
 alias his="history | grep $*"

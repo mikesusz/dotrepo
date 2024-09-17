@@ -97,9 +97,9 @@ if &columns == 80
     set foldcolumn=0
 endif
 
-call plug#begin('~/.vim/plugged')
-Plug 'alvan/vim-closetag'
-call plug#end()
+" call plug#begin('~/.vim/plugged')
+" Plug 'alvan/vim-closetag'
+" call plug#end()
 
 " filenames like *.xml, *.html, *.xhtml, ...
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
