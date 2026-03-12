@@ -30,7 +30,9 @@ alias gs="git status $*"
 alias fts="git reset --hard origin" # you know what this means.
 alias gmv="git mv $*"
 # via @captainsafia on twitter
-alias gcmb="git branch --merged | grep -Ev '(^\*|master)' | xargs git branch -d"
+alias gcmb="git branch --merged | grep -Ev '(^\*|main)' | xargs git branch -d"
+# fetch all, switch to main, and pull latest
+alias gtm="git fetch --all && git checkout main && git pull"
 
 
 # make it quicker to search through ps
