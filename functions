@@ -51,6 +51,11 @@ mvd() {
 	mv "$@" ~/Desktop/
 }
 
+# search docker logs
+dlogs() {
+  docker logs -f "$1" --tail="${2:-100}"
+}
+
 # reload profile 'cause we keep changing aliases
 function pro {
 

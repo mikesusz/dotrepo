@@ -44,6 +44,23 @@ alias gm="git merge $*" # there is a program called GraphicsMagick but i dont us
 alias fts="git reset --hard origin" # you know what this means.
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit --date=relative -25"
 
+# aliases for Docker
+# Docker compose shortcuts
+alias dcu='docker-compose up -d'
+alias dcd='docker-compose down'
+alias dcr='docker-compose restart'
+alias dcl='docker-compose logs -f'
+alias dcp='docker-compose pull'
+
+# Docker shortcuts
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias di='docker images'
+alias dl='docker logs -f'
+alias dex='docker exec -it'
+alias dprune='docker system prune -af'
+
+
 # make it quicker to search through ps
 alias psg="ps aux | grep $*"
 
