@@ -81,15 +81,6 @@ alias nrb="npm run build"
 # history searching
 alias his="history | grep $*"
 
-# tired of looking at compass init --help every time.
-alias compinit="compass init --sass-dir=sass --css-dir=. --images-dir=images --javascripts-dir=javascripts --syntax=scss --fonts-dir=fonts"
-
-# reload filesystem based templates in radiant CMS
-alias radreg="rake radiant:extensions:file_system_resources:register"
-
-# restart fitbit daemon
-alias fitbit="sudo launchctl stop com.fitbit.fitbitd;sudo launchctl start com.fitbit.fitbitd"
-
 # flush os x dns cache
 alias dns='sudo dscacheutil -flushcache'
 
