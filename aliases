@@ -8,7 +8,7 @@ alias egrep='egrep --color=auto'
 alias cl="clear"
 alias cls="clear;ls"
 alias sr="screen -r"
-alias lsp="ls -lFA $* | more"
+alias lsp="ls -lFAh $* | more"
 
 # from furbo - http://furbo.org/2014/09/03/the-terminal/
 alias con="tail -40 -f /var/log/system.log"
@@ -41,8 +41,13 @@ alias gd="git diff $*"
 alias gb="git branch $*"
 alias gco="git checkout $*" # avoided 'gc' too close to gcc
 alias gm="git merge $*" # there is a program called GraphicsMagick but i dont use it.
+alias gmv="git mv $*"
 alias fts="git reset --hard origin" # you know what this means.
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit --date=relative -25"
+# via @captainsafia on twitter
+alias gcmb="git branch --merged | grep -Ev '(^\*|main)' | xargs git branch -d"
+# fetch all, switch to main, and pull latest
+alias gtm="git fetch --all && git checkout main && git pull"
 
 # aliases for Docker
 # Docker compose shortcuts
@@ -60,12 +65,18 @@ alias dl='docker logs -f'
 alias dex='docker exec -it'
 alias dprune='docker system prune -af'
 
-
 # astro updates frequently
 alias nau="npx @astrojs/upgrade"
 
 # make it quicker to search through ps
 alias psg="ps aux | grep $*"
+
+# aliases for npm/node tasks
+alias nrd="npm run dev"
+alias nrl="npm run lint"
+alias nrf="npm run format"
+alias nrs="npm run start"
+alias nrb="npm run build"
 
 # history searching
 alias his="history | grep $*"

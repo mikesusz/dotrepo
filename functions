@@ -23,10 +23,17 @@ function dotdot () {
 	fi
 }
 
-
 # a function for git commit with message
 function gcm () {
         git commit -m "$*"
+}
+
+# create and checkout a new git branch
+function gnb() {
+  if [ "$1" != "" ]
+  then
+    git branch $1 && git checkout $1
+  fi
 }
 
 # cd into whatever is the forefront Finder window.
@@ -41,7 +48,7 @@ cdd() {
 	ls
 }
 
-# copy  file to the Desktop
+# copy file to the Desktop
 cpd() {
 	cp "$@" ~/Desktop/
 }
@@ -58,21 +65,17 @@ dlogs() {
 
 # reload profile 'cause we keep changing aliases
 function pro {
-
-	if [ -f ~/.profile ]; then
+	if [ -n "$ZSH_VERSION" ]; then
+		source ~/.zshrc
+	elif [ -f ~/.bash_profile ]; then
+		source ~/.bash_profile
+	elif [ -f ~/.profile ]; then
 		source ~/.profile
 	fi
-
-	if [ -f ~/.bash_profile ]; then
-		source ~/.bash_profile
-	fi
-
 }
 
 # linux systems, aptitude update + safe upgrade
-
 function aptup {
     sudo aptitude update;
     sudo aptitude safe-upgrade;
 }
-
