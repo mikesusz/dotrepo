@@ -87,8 +87,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/.dotrepo/zsh_aliases
-source ~/.dotrepo/zsh_functions
+source ~/.dotrepo/aliases
+source ~/.dotrepo/functions
 source ~/.dotlocal
 
 export NVM_DIR="$HOME/.nvm"
