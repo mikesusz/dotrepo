@@ -61,6 +61,9 @@ alias dex='docker exec -it'
 alias dprune='docker system prune -af'
 
 
+# astro updates frequently
+alias nau="npx @astrojs/upgrade"
+
 # make it quicker to search through ps
 alias psg="ps aux | grep $*"
 
